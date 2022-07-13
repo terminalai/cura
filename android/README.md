@@ -1,4 +1,3 @@
-# Hermoor
-**created by Prannaya Gupta**
+# Cura on Android
 
 Yay.
