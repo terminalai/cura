@@ -1,7 +1,0 @@
-{
-  "name": "hermoor",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
-}
