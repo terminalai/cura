@@ -1,6 +1,9 @@
 # Cura
+
 _By Karimi Zayan, Mario Tanijaya and Prannaya Gupta_
+
 **Submitted for**: Splash Awards 2022
+
 **Challenge Tracks**: AI for Good, AI in Healthcare, AI in Mental Wellness
 
 ## Opportunity Identified
