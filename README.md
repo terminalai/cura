@@ -11,6 +11,7 @@ _By Karimi Zayan, Mario Tanijaya and Prannaya Gupta_
 - [Code](https://github.com/terminalai/cura)
 - [To-Do List Invite](https://to-do.microsoft.com/sharing?InvitationToken=95Pg0MzYqN7Tn-f4OcSd7g38xemaOautRTvXjCDxCcM6oDn4NzMqk1L-_hFkfonK4)
 - [Figma Team Invitation](https://www.figma.com/team_invite/redeem/22wkI5W5pTlS3KSsOQv9Eo)
+- [Pitch Deck](https://nushighedu-my.sharepoint.com/:p:/g/personal/h1810124_nushigh_edu_sg/EdsAwtaQ3ktImtgTc8G6eAEB__voYm-MrkIIm3TqKbpIIg?e=RofF4E)
 
 ### Submission Requirements
 - A PowerPoint Presentation of overall flow of Cura
