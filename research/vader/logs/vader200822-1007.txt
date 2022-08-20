@@ -1,0 +1,19 @@
+                                               texts   neg  ...    pos  compound
+0                     I'm not gonna kill myself more  0.00  ...  0.428    0.5773
+1  i am like secretly hoping i get kicked so i du...  0.00  ...  0.249    0.6486
+2             surprisingly, not dead, still not dead  0.00  ...  0.752    0.8436
+3   we are scrounging together something presentable  0.00  ...  0.000    0.0000
+4      cause we'll just get laughed at into oblivion  0.00  ...  0.300    0.4588
+5                                  i got kicked :(((  0.00  ...  0.000    0.0000
+6                       I really want to kill myself  0.47  ...  0.151   -0.6565
+7                                 "torture.pdf" lmao  0.00  ...  0.796    0.5994
+8                            and I wanna kill myself  0.54  ...  0.000   -0.6908
+
+[9 rows x 5 columns]
+      neg      neu      pos  compound
+3  0.0000  0.64275  0.35725  0.517375
+4  0.0000  0.67475  0.32525  0.487750
+5  0.0000  0.73700  0.26300  0.325600
+6  0.1175  0.76975  0.11275 -0.049425
+7  0.1175  0.57075  0.31175  0.100425
+8  0.2525  0.51075  0.23675 -0.186975
