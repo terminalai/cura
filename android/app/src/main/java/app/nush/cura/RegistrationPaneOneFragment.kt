@@ -53,6 +53,10 @@ class RegistrationPaneOneFragment : Fragment() {
         binding.previous.setOnClickListener {
             findNavController().navigate(R.id.action_registrationPaneOneFragment_to_SecondFragment)
         }
+
+        binding.next.setOnClickListener {
+            findNavController().navigate(R.id.action_registrationPaneOneFragment_to_registrationPaneTwoFragment)
+        }
     }
 
     companion object {
