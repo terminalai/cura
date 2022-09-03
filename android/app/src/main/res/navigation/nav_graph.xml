@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="app.nush.cura.StartPaneFragment"
+        android:name="app.nush.cura.ui.login.StartPaneFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="app.nush.cura.UserSignInFragment"
+        android:name="app.nush.cura.ui.login.UserSignInFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -27,14 +27,22 @@
         <action
             android:id="@+id/action_SecondFragment_to_registrationPaneOneFragment"
             app:destination="@id/registrationPaneOneFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationPaneOneFragment"
-        android:name="app.nush.cura.RegistrationPaneOneFragment"
+        android:name="app.nush.cura.ui.login.RegistrationPaneOneFragment"
         android:label="fragment_registration_pane_one"
         tools:layout="@layout/fragment_registration_pane_one" >
         <action
             android:id="@+id/action_registrationPaneOneFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="app.nush.cura.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
 </navigation>
