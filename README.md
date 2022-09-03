@@ -20,7 +20,7 @@ _By Karimi Zayan, Mario Tanijaya and Prannaya Gupta_
 - Complete Literacy in AI (AI Singapore)
 
 
-**Deadline**: 1st September, 2359
+**Deadline**: 5th September, 2359
 
 **Presentation Format**: 6 minutes of Presentation & Showcase of prototype on 14/15 Sep from 2pm to 5pm.
 
