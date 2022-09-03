@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
         android:name="app.nush.cura.ui.login.StartPaneFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_start">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -19,7 +19,7 @@
         android:id="@+id/SecondFragment"
         android:name="app.nush.cura.ui.login.UserSignInFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationPaneTwoFragment"
-        android:name="app.nush.cura.RegistrationPaneTwoFragment"
+        android:name="app.nush.cura.ui.login.RegistrationPaneTwoFragment"
         android:label="fragment_registration_pane_two"
         tools:layout="@layout/fragment_registration_pane_two" >
         <action
