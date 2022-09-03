@@ -6,84 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationPaneOneFragment">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp">
 
-        <LinearLayout
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your interests!"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/layout"
             android:layout_width="match_parent"
-            android:layout_height="655dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingTop="20dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+
+            android:layout_marginTop="14dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/menu"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="label">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="label"
+
+                >
 
                 <AutoCompleteTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/list"
-                    android:inputType="none"
-                    />
+                    android:layout_width="225dp"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-            </com.google.android.material.chip.ChipGroup>
-        </LinearLayout>
+            <Button
+                android:id="@+id/addInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:padding="10dp"
+                android:text="Add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.465"
+                app:layout_constraintStart_toEndOf="@+id/menu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            >
+
+
+        </com.google.android.material.chip.ChipGroup>
 
         <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:gravity="center">
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="24dp">
 
 
             <Button
                 android:id="@+id/next"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="sans-serif-black"
                 android:text="Next"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/previous"
-                android:layout_alignParentRight="true"
                 app:shapeAppearanceOverlay="@style/standardButton"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-black"
                 app:strokeWidth="5dp"
-                style="?attr/materialButtonOutlinedStyle"
                 tools:layout_editor_absoluteY="721dp" />
 
             <Button
                 android:id="@+id/previous"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-black"
                 android:text="Previous"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toStartOf="@+id/next"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_alignParentLeft="true"
                 app:shapeAppearanceOverlay="@style/standardButton"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-black"
                 app:strokeWidth="5dp"
-                style="?attr/materialButtonOutlinedStyle"
                 tools:layout_editor_absoluteY="721dp" />
 
         </RelativeLayout>
 
-    </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </FrameLayout>
