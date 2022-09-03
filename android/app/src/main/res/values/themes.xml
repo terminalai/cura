@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Cura" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/cool_blue</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -17,6 +17,12 @@
     <style name="Theme.Cura.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="standardButton">
+        <item name="strokeWidth">5dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="Theme.Cura.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

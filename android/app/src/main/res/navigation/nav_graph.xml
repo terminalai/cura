@@ -24,5 +24,17 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_registrationPaneOneFragment"
+            app:destination="@id/registrationPaneOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationPaneOneFragment"
+        android:name="app.nush.cura.RegistrationPaneOneFragment"
+        android:label="fragment_registration_pane_one"
+        tools:layout="@layout/fragment_registration_pane_one" >
+        <action
+            android:id="@+id/action_registrationPaneOneFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
