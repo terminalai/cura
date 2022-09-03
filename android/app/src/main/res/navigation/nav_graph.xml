@@ -39,6 +39,21 @@
         <action
             android:id="@+id/action_registrationPaneOneFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_registrationPaneOneFragment_to_registrationPaneTwoFragment"
+            app:destination="@id/registrationPaneTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationPaneTwoFragment"
+        android:name="app.nush.cura.RegistrationPaneTwoFragment"
+        android:label="fragment_registration_pane_two"
+        tools:layout="@layout/fragment_registration_pane_two" >
+        <action
+            android:id="@+id/action_registrationPaneTwoFragment_to_registrationPaneOneFragment"
+            app:destination="@id/registrationPaneOneFragment" />
+        <action
+            android:id="@+id/action_registrationPaneTwoFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"

@@ -5,7 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import app.nush.cura.R
+
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.EditText
+import app.nush.cura.databinding.FragmentRegistrationPaneTwoBinding
+import app.nush.cura.databinding.FragmentSecondBinding
+import com.google.android.material.textfield.TextInputLayout
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +28,12 @@ class RegistrationPaneTwoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentRegistrationPaneTwoBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +47,15 @@ class RegistrationPaneTwoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registration_pane_two, container, false)
+        _binding = FragmentRegistrationPaneTwoBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val items = listOf("Option 1", "Option 2", "Option 3", "Option 4")
+        val adapter = ArrayAdapter(requireContext(), androidx.navigation.ui.R.layout.support_simple_spinner_dropdown_item, items)
+        binding.list.setAdapter(adapter)
     }
 
     companion object {
