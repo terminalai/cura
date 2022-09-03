@@ -24,16 +24,20 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="410dp"
-                android:src="@drawable/logo_placeholder" />
+                android:src="@drawable/logo" />
 
             <Button
                 android:id="@+id/buttonFirst"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Start"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                style="?attr/materialButtonOutlinedStyle"
+                app:shapeAppearanceOverlay="@style/standardButton"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                app:strokeWidth="5dp"
                 tools:layout_editor_absoluteY="721dp" />
 
         </LinearLayout>

@@ -32,6 +32,10 @@ class UserSignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.register.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_registrationPaneOneFragment)
+        }
+
     }
 
     override fun onDestroyView() {
