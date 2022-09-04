@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687405003901",
+    "project_id": "chatdemo-f1328",
+    "storage_bucket": "chatdemo-f1328.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687405003901:android:845aec06acb87c0be3ad14",
+        "android_client_info": {
+          "package_name": "app.nush.chatdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687405003901-cfn75cke1ibc6em0iilqb6vuidss5q8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEee8Nd7HUBSU0GWIijuuo8LCp4VJPEJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687405003901-cfn75cke1ibc6em0iilqb6vuidss5q8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
