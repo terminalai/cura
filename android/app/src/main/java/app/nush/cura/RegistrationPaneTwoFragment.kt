@@ -32,7 +32,7 @@ class RegistrationPaneTwoFragment : Fragment() {
 
     private var _binding: FragmentRegistrationPaneTwoBinding? = null
 
-    
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.

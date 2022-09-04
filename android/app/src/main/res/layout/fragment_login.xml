@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserSignInFragment"
+    tools:context=".ui.login.UserSignInFragment"
     >
 
     <LinearLayout
@@ -80,11 +80,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="?attr/materialButtonOutlinedStyle"
-            app:shapeAppearanceOverlay="@style/standardButton"
+            app:shapeAppearanceOverlay="@style/invertStandardButton"
             android:textSize="15sp"
+            android:backgroundTint="@color/cool_blue"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
             app:strokeWidth="5dp"
-            android:text="Register" />
+            android:text="... or Register!" />
 
     </LinearLayout>
 </LinearLayout>
