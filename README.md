@@ -7,12 +7,13 @@ _By Karimi Zayan, Mario Tanijaya and Prannaya Gupta_
 **Challenge Tracks**: AI for Good, AI in Healthcare, AI in Mental Wellness
 
 ## Work
+<!--
 ### 🔗 Links
 - [Code](https://github.com/terminalai/cura)
 - [To-Do List Invite](https://to-do.microsoft.com/sharing?InvitationToken=95Pg0MzYqN7Tn-f4OcSd7g38xemaOautRTvXjCDxCcM6oDn4NzMqk1L-_hFkfonK4)
 - [Figma Team Invitation](https://www.figma.com/team_invite/redeem/22wkI5W5pTlS3KSsOQv9Eo)
 - [Pitch Deck](https://nushighedu-my.sharepoint.com/:p:/g/personal/h1810124_nushigh_edu_sg/EdsAwtaQ3ktImtgTc8G6eAEB__voYm-MrkIIm3TqKbpIIg?e=RofF4E)
-
+-->
 ### Submission Requirements
 - A PowerPoint Presentation of overall flow of Cura
 - Updated Proposal
@@ -25,7 +26,7 @@ _By Karimi Zayan, Mario Tanijaya and Prannaya Gupta_
 **Presentation Format**: 6 minutes of Presentation & Showcase of prototype on 14/15 Sep from 2pm to 5pm.
 
 ### Current Tasks
-- [ ] Develop an Android Application based off the Wireframes from Manfred (Zayan)
+- [ ] Develop an Android Application based off the Wireframes (Zayan)
 - [ ] Create a mathematical/AI model for matching people based off interests (Mario)
 - [ ] Create a multimodal NLP model for the bot (Prannaya)
 - [ ] Port over models to GCP (Zayan?)
