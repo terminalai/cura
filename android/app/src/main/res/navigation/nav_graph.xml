@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/FirstFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -52,12 +52,20 @@
             android:id="@+id/action_registrationPaneTwoFragment_to_registrationPaneOneFragment"
             app:destination="@id/registrationPaneOneFragment" />
         <action
-            android:id="@+id/action_registrationPaneTwoFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_registrationPaneTwoFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="app.nush.cura.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_chatPageFragment"
+            app:destination="@id/chatPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatPageFragment"
+        android:name="app.nush.cura.ChatPageFragment"
+        android:label="ChatPageFragment" />
 </navigation>

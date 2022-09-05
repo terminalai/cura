@@ -37,6 +37,10 @@ class UserSignInFragment : Fragment() {
             findNavController().navigate(R.id.action_SecondFragment_to_registrationPaneOneFragment)
         }
 
+        binding.login.setOnClickListener{
+            findNavController().navigate(R.id.action_SecondFragment_to_mainFragment)
+        }
+
     }
 
     override fun onDestroyView() {

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentRegistrationPaneTwoBinding
 import com.google.android.material.chip.Chip
@@ -56,9 +57,12 @@ class RegistrationPaneTwoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val items = listOf("Option 1", "Option 2", "Option 3", "Option 4")
+        val items = listOf("Sailing", "Knitting", "Hiking", "Biking", "Swimming", "Crafts", "Sleeping")
         val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
         binding.list.setAdapter(adapter)
+        binding.next.setOnClickListener{
+            findNavController().navigate(R.id.action_registrationPaneTwoFragment_to_SecondFragment)
+        }
     }
 
     private fun addNewChip() {
