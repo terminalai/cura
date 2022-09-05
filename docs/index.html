@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: Inter;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cura</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="parallax-template.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="Cura" />
+        <meta property="og:description" content="Care Connected: A Social Network for Caregivers" />
+        <meta property="og:image" content="" />
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="144x144" href="#">
+        <link rel="icon" type="image/png" sizes="192x192" href="#">
+        <link rel="icon" type="image/png" sizes="96x96" href="#">
+        <link rel="icon" type="image/png" sizes="16x16" href="">
+        <script>
+            var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+            
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+            
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+            
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+            
+                if (this.isDeleting) { delta /= 2; }
+            
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+            
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+            
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+            };
+        </script>
+    </head>
+    <body>
+        <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background"
+            data-paroller-direction="vertical">
+            <!-- bluez_bg  -->
+            <div class="section" style="overflow: hidden">
+                <div style="margin-bottom:100px" align="right">
+                    <div class="container header-container">
+                        <div class="center row">
+                            <h1 class="left-align" style="color: white; margin-top: 200px; margin-bottom: 10px">Cura</h1>
+                            <div class="l8 m8 s12" style=" padding-left:0px !important">
+                                <p class="p1-key-body left-align" style="color: white; font-family: Quicksand; font-size: 30px">Care Connected.</p>
+                                <a href="" id="play-button" class="modal-trigger btn-large waves-effect waves-light" style="margin-top: 50px; margin-bottom: 200px">Use the app now!</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slanted_1 container-snap" id="section_characters" data-pg-name="section1"
+                data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
+                <div class="container  section">
+                    <!--   Icon Section   -->
+                    <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; font-size: 50px; margin-bottom: 60px">Beautiful Interface.
+                    </h3>
+                    <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; font-size: 50px; margin-bottom: 60px">User-Friendly.
+                    </h3>
+                    <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; font-size: 50px; margin-bottom: 60px">The Human Element.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container-snap bluez_bg" id="section_screenshots" data-pg-name="Screenshots"
+            style="padding-bottom:100px">
+            <div class="section" style="margin-top: 100px">
+                <h2 class="center-align " style="color:white; text-transform: uppercase;">This is Cura.</h2>
+                <div class="row container">
+                    <div class="col l4 m4 s12">
+                        <img src="assets/img/wireframes/welcome.png" class="responsive-img  z-depth-2"
+                            alt="Insert Screenshots" />
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <img src="assets/img/wireframes/homepage.png" class="responsive-img  z-depth-2"
+                            alt="Insert Screenshots" />
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <img src="assets/img/wireframes/overview.png" class="responsive-img  z-depth-2"
+                            alt="Insert Screenshots" />
+                    </div>
+                    <div class="col l6 m4 s12">
+                        <img src="assets/img/wireframes/keyboard.png" class="responsive-img  z-depth-2"
+                            alt="Insert Screenshots" />
+                    </div>
+                    <div class="col l6 m4 s12">
+                        <img src="assets/img/wireframes/bot.png" class="responsive-img  z-depth-2"
+                            alt="Insert Screenshots" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section_whoarewe" data-pg-name="who are we" class="white_bg slanted_1">
+            <div class="container fullheight section">
+                <!--   Icon Section   -->
+                <div class="row" style="margin-top: 100px;">
+                    <h1 class="midnight-dark2">What is Cura?</h1>
+                    <div class="col l8 m8 s12 p-body-20" style="padding-left:0px">
+                        <p class="midnight-dark2">
+                            ...
+                        </p>
+                        <p class="midnight-dark2">
+                            ...
+                        </p>
+                        <p class="midnight-dark1">
+                            ...
+                        </p>
+                        <div class="center-align hide-on-med-and-up show-on-small">
+                            <a href="#"><img class="circle responsive-img z-depth-2" height="200px" src="assets/img/filled-logo.png" style="margin-bottom:36px" width="60%" /></a>
+                            <a href="https://www.nushigh.edu.sg/"><img class="circle responsive-img z-depth-2" height="200px" src="assets/img/nush.jpg" style="margin-bottom:36px" width="60%" /></a>
+                            <a href="https://www.suss.edu.sg/"><img class="circle responsive-img z-depth-2" height="200px" src="assets/img/SUSSlogo.png" style="margin-bottom:36px" width="60%" /></a>
+                        </div>
+                    </div>
+                    <div class="col hide-on-small-only l3 m3 offset-l1 offset-m1 right-align">
+                        <a href="#"><img class="circle  z-depth-2" height="200px" src="assets/img/logo.png" style="margin-bottom:36px" /></a>
+                        <a href="https://www.nushigh.edu.sg/"><img class="circle z-depth-2" height="200px" src="assets/img/nush.jpg" style="margin-bottom:36px" /></a>
+                        <a href="https://www.scs.org.sg/"><img class="circle  z-depth-2" height="200px" src="assets/img/scs.png" style="margin-bottom:36px" /></a>
+                    </div>
+                </div>
+<!--                 <div class="row" style="padding-bottom: 100px;">
+                    <h3 class="midnight-dark2">The (Original) Pitch Video</h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/f130fZot7OY" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        </div>
+        <footer class="page-footer" style="background: var(--midnight-dark2);">
+            <div class="footer-copyright">
+                <div class="center-align container">
+                    Made for the <a href="https://www.scs.org.sg/awards/splash/2022/competition-details">Splash Awards Challenge 2022</a>.<br/><br/>
+                </div>
+            </div>
+        </footer>
+        <!--  Scripts-->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="materialize/js/materialize.js"></script>
+        <script src="assets/js/jquery.paroller.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.carousel').carousel();
+                $('.modal').modal();
+            
+                $('.carousel.carousel-slider').carousel({
+                    dist: 0,
+                    fullWidth: true,
+                    indicators: true,
+                });
+            
+                $("[data-paroller-factor]").paroller();
+            
+            })
+            
+            
+        </script>
+    </body>
+</html>
