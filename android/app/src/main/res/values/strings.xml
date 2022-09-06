@@ -11,6 +11,71 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hotlines">
+        National Care Hotline: 1800-202-6868 \n
+(8am-12am daily, from 1 Sep 2020) \n\n
+ Mental Well-being\n
+- Fei Yue’s Online Counselling Service \n
+- Institute of Mental Health’s Mental Health Helpline (6389-2222)\n
+- Samaritans of Singapore (1800-221-4444)\n
+- Silver Ribbon Singapore (6385-3714)\n\n
+ Marital and parenting issues\n
+- Community Psychology Hub’s Online Counselling platform\n
+ Violence or abuse\n
+- Big Love Child Protection Specialist Centre (6445-0400)\n
+- HEART @ Fei Yue Child Protection Specialist Centre (6819-9170)\n
+- PAVE Integrated Services for Individual and Family Protection (6555-0390)\n
+- Project StART (6476-1482)\n
+- TRANS SAFE Centre (6449-9088)\n\n
+ Counselling\n
+- TOUCHline (Counselling) – 1800 377 2252\n\n
+ For other Helplines and mental health-related support\n
+- go.gov.sg/hotlines (BELLE, Beyond the Label helpbot)\n
+- www.msf.gov.sg/Pages/Contact-Us.aspx
+    </string>
+
+    <string name="cbt">
+        Cognitive behavioral therapy (CBT) is a form of psychological treatment that has been demonstrated to be effective for a range of problems including depression, anxiety disorders, alcohol and drug use problems, marital problems, eating disorders, and severe mental illness. Numerous research studies suggest that CBT leads to significant improvement in functioning and quality of life. In many studies, CBT has been demonstrated to be as effective as, or more effective than, other forms of psychological therapy or psychiatric medications.
+\n\n
+It is important to emphasize that advances in CBT have been made on the basis of both research and clinical practice. Indeed, CBT is an approach for which there is ample scientific evidence that the methods that have been developed actually produce change. In this manner, CBT differs from many other forms of psychological treatment.
+\n\n
+CBT is based on several core principles, including:
+\n\n
+Psychological problems are based, in part, on faulty or unhelpful ways of thinking.Psychological problems are based, in part, on learned patterns of unhelpful behavior.People suffering from psychological problems can learn better ways of coping with them, thereby relieving their symptoms and becoming more effective in their lives.
+CBT treatment usually involves efforts to change thinking patterns. These strategies might include:
+\n\n
+Learning to recognize one’s distortions in thinking that are creating problems, and then to reevaluate them in light of reality.Gaining a better understanding of the behavior and motivation of others.Using problem-solving skills to cope with difficult situations.Learning to develop a greater sense of confidence in one’s own abilities.
+CBT treatment also usually involves efforts to change behavioral patterns. These strategies might include:
+\n\n
+Facing one’s fears instead of avoiding them.Using role playing to prepare for potentially problematic interactions with others.Learning to calm one’s mind and relax one’s body.
+Not all CBT will use all of these strategies. Rather, the psychologist and patient/client work together, in a collaborative fashion, to develop an understanding of the problem and to develop a treatment strategy.
+\n\n
+CBT places an emphasis on helping individuals learn to be their own therapists. Through exercises in the session as well as “homework” exercises outside of sessions, patients/clients are helped to develop coping skills, whereby they can learn to change their own thinking, problematic emotions, and behavior.
+\n\n
+CBT therapists emphasize what is going on in the person’s current life, rather than what has led up to their difficulties. A certain amount of information about one’s history is needed, but the focus is primarily on moving forward in time to develop more effective ways of coping with life.
+    </string>
+
+
+    <string name="effective_communication">
+
+        If you want something, sometimes the best approach is to ask for it. We ask customers to buy our products; we ask potential investors to put their trust – and money – into our ideas; we ask for salary increases and promotions; we raise complaints, etc. Some people just ask naturally but in many cases – especially in business – people hold back because they don’t want to appear pushy or aggressive.
+\n\n
+Asking for something means first identifying what it is you want. For example, if you are an aspiring entrepreneur, saying that you have a great idea for a new company and you want to start your own business is not good enough. Your dream may be clear to you, but your goal may not be objective and understandable enough for others. This is why many times you might get something, but not what you were hoping for. Before asking for what you want, first establish what you need; in other words, you must clearly define your desired outcome.
+\n\n
+You may be laser-focused on your end goals and still find it difficult to effectively communicate to others your ideas, needs and concerns. Why? For one thing, some people are naturally more hesitant and agreeable and less inclined to “go for it” in certain situations – we refer to them as the “Low Ds”, based on the DISC measures of observable behavior. Secondly, a lack of experience can be a major obstacle in communicating your needs to other people, especially if those people are your superiors. If you haven’t had much practice in this area, asking clearly, concisely and explicitly for what you want can be quite challenging and stressful.
+\n\n
+Developing interpersonal communication skills is key to getting people to understand what you may want from them and how they can accommodate your needs. The following Six Keys to Confident Communication may help you articulate the right message, for the right audience, at the right time, and in doing so, help you get what you want!
+\n\n
+Have a clearly defined reason. And put it in writing before delivering your message to the listener(s). You must answer the question “Why?” – Why do you need what you are about to ask for? Why is it necessary for your desired outcome? Why do you need it now? Having your reasons in writing makes a difference: Not only will you be able to find words easily – instead of blurting out the first thing that comes to mind – when actually speaking to the listener(s), but you will also set expectations for your audience on what you hope to accomplish in the exchange.
+
+        \n\nKnow your audience and to whom you are speaking. In order to connect with the recipient(s) of your message, you must first get to know the person or people to whom you are going to speak. Too often, people make the mistake of approaching someone with a script in their mind but without a clear understanding of what is relevant to the other party. By learning a little about your listener(s), you will be able to tailor your message and its delivery such that it can be easily understood. Effective communication is not about getting your message out; it is about making sure that the other party hears and comprehends what you are saying.
+\n\nSegment the information. This step is especially important when you must explain a new concept or complex idea, or simply when there is a lot of information to be delivered. The last thing you want is to confuse your listener(s), since confusion can easily turn into annoyance and loss of interest. Create a flow of information by dividing it into smaller and easier-to-process chunks. Again, simplicity is key: You want your audience to be able to follow you from A to B without any difficulties.
+\n\nProvide context. Don’t just assume that the other party will understand what you are talking about and why they should want to help you. You want to anticipate the questions your listener(s) may have and answer them before they are even asked. “Why are you asking me for help?”, “How can I help you?”, “What’s in it for me?” and other questions like these are good examples of what you should be prepared for. Another good idea would be to use analogies for explaining multiple or abstract concepts. Whenever appropriate, don’t hesitate to use humor to break down the barriers between you and your listener(s); when people are in good spirits they are more likely to consider helping you out.
+\n\nMatch their style. It’s easy to become preoccupied with what you want to say and how you are going to do it, and forget about the person (or people) right in front of you. Who are you talking to? What drives them? What type of behavioral style do they have? Some people prefer their information concise and to the point, while others need to be walked through all the steps and their respective alternatives. Consider both verbal and non-verbal messages, and tailor your communication appropriately.
+\n\nBring closure. Closure is essential to ensure that the other party got your message right. Restate your point and the pertinent key elements, make sure to clear up any ambiguity that could have occurred, and suggest the next steps for the other party to take in order to accommodate your request.
+\n\nEffective communication plays an important part in our lives, and it is actually easier to achieve than most people think. These strategies will help you communicate your ideas, requests and concerns in a clearer and more cogent manner, bringing you closer to your desired outcome.
+    </string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

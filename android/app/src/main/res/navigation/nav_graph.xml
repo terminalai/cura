@@ -63,9 +63,39 @@
         <action
             android:id="@+id/action_mainFragment_to_chatPageFragment"
             app:destination="@id/chatPageFragment" />
+
+
+        <action
+            android:id="@+id/homeFragment_to_homeInfoFragment"
+            app:destination="@id/HomeInfoFragment" />
+
+        <argument
+            android:name="page_title"
+            app:argType="string" />
+        <argument
+            android:name="page_info"
+            app:argType="string" />
+        <argument
+            android:name="page_img"
+            app:argType="integer" />
+
     </fragment>
     <fragment
         android:id="@+id/chatPageFragment"
         android:name="app.nush.cura.ChatPageFragment"
         android:label="ChatPageFragment" />
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="app.nush.cura.ui.main.HomeFragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeInfoFragment"
+        android:name="app.nush.cura.ui.main.HomeInfoFragment"
+        android:label="HomeInfoFragment" />
+
 </navigation>
