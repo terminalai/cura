@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/profilePicture"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:id="@+id/chat_title"
             android:layout_width="wrap_content"
             android:layout_height="39dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/chat_last_message"
             app:layout_constraintTop_toTopOf="@+id/profilePicture"
             tools:text="@tools:sample/cities" />
@@ -38,14 +38,13 @@
         <TextView
             android:id="@+id/chat_last_message"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             app:layout_constrainedWidth="true"
             android:layout_marginStart="12dp"
             android:ellipsize="end"
             android:lines="1"
             android:maxLines="1"
             android:text="city omg cufffffffffffffasfdasdfasdfasdfasdlsadfsddf"
-            android:textSize="18sp"
             android:theme="@style/Theme.Cura.GreyText"
             app:layout_constraintBottom_toBottomOf="@+id/profilePicture"
             app:layout_constraintEnd_toStartOf="@+id/relativeLayout2"
