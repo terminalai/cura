@@ -69,6 +69,10 @@
             android:id="@+id/homeFragment_to_homeInfoFragment"
             app:destination="@id/HomeInfoFragment" />
 
+        <action
+            android:id="@+id/homeFragment_to_homeHotlinesFragment"
+            app:destination="@id/HomeHotlinesFragment" />
+
         <argument
             android:name="page_title"
             app:argType="string" />
@@ -97,5 +101,10 @@
         android:id="@+id/HomeInfoFragment"
         android:name="app.nush.cura.ui.main.HomeInfoFragment"
         android:label="HomeInfoFragment" />
+
+    <fragment
+        android:id="@+id/HomeHotlinesFragment"
+        android:name="app.nush.cura.ui.main.HomeHotlinesFragment"
+        android:label="HomeHotlinesFragment" />
 
 </navigation>

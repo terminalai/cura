@@ -34,15 +34,17 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
         holder.itemView.setOnClickListener {view ->
 
+if (position == 0) {
+    Navigation.findNavController(view).navigate(R.id.homeFragment_to_homeHotlinesFragment)
+} else {
+    Navigation.findNavController(view).navigate(R.id.homeFragment_to_homeInfoFragment, Bundle().apply { putString("page_title",
+        titles[position]
+    ); putString("page_info", view.context.resources.getString(info[position]));
+        putInt("page_img", images[position])
+    })
+}
+}
 
-
-
-                Navigation.findNavController(view).navigate(R.id.homeFragment_to_homeInfoFragment, Bundle().apply { putString("page_title",
-                    titles[position]
-                ); putString("page_info", view.context.resources.getString(info[position]));
-                    putInt("page_img", images[position])
-                })
-            }
 
     }
 

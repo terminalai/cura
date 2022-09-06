@@ -11,7 +11,18 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hotlines_mental_title"><u>Mental Wellness</u></string>
+    <string name="hotlines_counsel_title"><u>Counselling</u></string>
+    <string name="hotlines_other_title"><u>For other Helplines and mental health-related support</u></string>
+
+    <string name="hotlines_website_feiyue"><a href="http://www.ec2.sg/">- Fei Yue’s Online Counselling Service</a></string>
+    <string name="hotlines_website_silver"><a href="http://www.silverribbonsingapore.com/">- Silver Ribbon Singapore</a></string>
+    <string name="hotlines_website_touchline"><a href="http://www.touch.org.sg/keeping-our-community-safe">- TOUCHline (Counselling)</a></string>
+    <string name="hotlines_website_helpbot"><a href="http://www.go.gov.sg/hotlines">- go.gov.sg/hotlines (BELLE, Beyond the Label helpbot)</a></string>
+    <string name="hotlines_website_msf"><a href="https://www.msf.gov.sg/Pages/Contact-Us.aspx">- msf.gov.sg/Pages/Contact-Us.aspx (Ministry of Social and Family Development)</a></string>
+
     <string name="hotlines">
+
         National Care Hotline: 1800-202-6868 \n
 (8am-12am daily, from 1 Sep 2020) \n\n
  Mental Well-being\n
