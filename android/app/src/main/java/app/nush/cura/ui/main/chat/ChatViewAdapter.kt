@@ -10,28 +10,33 @@ import app.nush.cura.R
 
 class ChatViewAdapter() : RecyclerView.Adapter<ChatViewAdapter.ViewHolder>() {
 
-    private val titles = listOf("FloatingBanana", "SoaringWatermelon")
-    private val details = arrayOf("Last seen 5/9/2022", "Last seen 4/9/2022")
+    private val titles = listOf("The Frontliner", "Nurse")
+    private val lastMessages = arrayOf("Good morning, how was the night shift?", "Hello! Heard you are a nurse too?")
+    private val lastSeen = arrayOf("Today", "5/9")
+    private val unreadMessageCount = arrayOf("5","1")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_layout, parent, false)
-
         return ViewHolder(view)
 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.item_title.text = titles[position]
-        holder.item_detail.text = details[position]
+        holder.chat_title.text = titles[position]
+        holder.chat_last_message.text = lastMessages[position]
+        holder.chat_unread_message_count.text = unreadMessageCount[position]
+        holder.chat_last_seen.text = lastSeen[position]
     }
 
     override fun getItemCount(): Int = titles.size
 
     inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val item_title: TextView = itemView.findViewById(R.id.item_title)
-        val item_detail: TextView = itemView.findViewById(R.id.item_detail)
+        val chat_title: TextView = itemView.findViewById(R.id.chat_title)
+        val chat_last_message: TextView = itemView.findViewById(R.id.chat_last_message)
+        val chat_unread_message_count : TextView = itemView.findViewById(R.id.chat_unread_message_count)
+        val chat_last_seen: TextView = itemView.findViewById(R.id.chat_last_seen)
     }
 
 }

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentRegistrationPaneTwoBinding
+import app.nush.cura.model.chat.User
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
@@ -29,6 +30,8 @@ class RegistrationPaneTwoFragment : Fragment() {
     private var param2: String? = null
 
     private var _binding: FragmentRegistrationPaneTwoBinding? = null
+    private lateinit var user: User;
+    private var interests = arrayListOf<String>();
 
 
 
@@ -57,10 +60,12 @@ class RegistrationPaneTwoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+      //  user = User("123","Mario","password", arrayListOf<String>(), map); // todo pass in actjual data
         val items = listOf("Sailing", "Knitting", "Hiking", "Biking", "Swimming", "Crafts", "Sleeping")
         val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
         binding.list.setAdapter(adapter)
         binding.next.setOnClickListener{
+
             findNavController().navigate(R.id.action_registrationPaneTwoFragment_to_SecondFragment)
         }
     }
@@ -68,8 +73,10 @@ class RegistrationPaneTwoFragment : Fragment() {
     private fun addNewChip() {
         val keyword: String = binding.menu.editText?.text.toString()
 
-        // todo add the interests to the user
-        // todo check if interest have been added
+        if (keyword in interests) {
+            return
+        }
+
 
         try {
             val inflater = LayoutInflater.from(this.context)
@@ -90,6 +97,7 @@ class RegistrationPaneTwoFragment : Fragment() {
             newChip.elevation = 15F;
 
             binding.chipGroup.addView(newChip)
+            interests.add(keyword)
 
             // Set Listener for the Chip:
             newChip.setOnCloseIconClickListener { v -> handleChipCloseIconClicked(v as Chip) }
