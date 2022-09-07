@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentMainBinding
 
@@ -19,7 +18,7 @@ class MainFragment : Fragment() {
         _binding = FragmentMainBinding.inflate(inflater, container, false);
         val homeFragment = HomeFragment()
         val chatFragment = ChatFragment()
-        val settingsFragment = SettingsFragment()
+        val healthFragment = HealthFragment()
 
         setCurrentFragment(homeFragment)
 
@@ -28,7 +27,7 @@ class MainFragment : Fragment() {
             when(it.itemId){
                 R.id.home->setCurrentFragment(homeFragment)
                 R.id.chat->setCurrentFragment(chatFragment)
-                R.id.settings->setCurrentFragment(settingsFragment)
+                R.id.settings->setCurrentFragment(healthFragment)
 
             }
             true
