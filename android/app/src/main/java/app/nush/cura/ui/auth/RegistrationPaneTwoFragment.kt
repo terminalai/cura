@@ -1,4 +1,4 @@
-package app.nush.cura.ui.login
+package app.nush.cura.ui.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentRegistrationPaneTwoBinding
 import app.nush.cura.model.chat.User
+import app.nush.cura.ui.auth.AuthFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
@@ -24,7 +25,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [RegistrationPaneTwoFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RegistrationPaneTwoFragment : Fragment() {
+class RegistrationPaneTwoFragment : AuthFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null

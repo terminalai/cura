@@ -1,16 +1,18 @@
-package app.nush.cura.ui.login
+package app.nush.cura.ui.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentStartBinding
+import app.nush.cura.ui.auth.AuthFragment
 
 
-class StartPaneFragment : Fragment() {
+class StartPaneFragment : AuthFragment() {
     private var _binding: FragmentStartBinding? = null
     private val binding get() = _binding!!
 

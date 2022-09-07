@@ -1,4 +1,4 @@
-package app.nush.cura.ui.login
+package app.nush.cura.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,7 @@ import app.nush.cura.R
 import app.nush.cura.databinding.FragmentRegistrationPaneOneBinding
 
 
-class RegistrationPaneOneFragment : Fragment() {
+class RegistrationPaneOneFragment : AuthFragment() {
     private var _binding: FragmentRegistrationPaneOneBinding? = null
     private val binding get() = _binding!!
 
