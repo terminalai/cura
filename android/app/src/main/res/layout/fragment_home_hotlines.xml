@@ -18,6 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="80dp"
 
         >
 
@@ -50,7 +51,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
             android:text="- National Care Hotline: (8am-12am daily)"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView4"
@@ -85,7 +86,7 @@
             android:layout_marginEnd="20dp"
             android:autoLink="phone"
             android:text="1800-202-6868"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView2" />
 
@@ -96,7 +97,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_feiyue"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -110,7 +111,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
             android:text="- Institute of Mental Health’s Mental Health Helpline"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
@@ -125,7 +126,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="6389-2222"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView6" />
 
@@ -136,7 +137,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="7dp"
             android:text="- Samaritans of Singapore"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@+id/textView9"
             app:layout_constraintHorizontal_bias="0.0"
@@ -150,7 +151,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="1800-221-4444"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
@@ -161,7 +162,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="28dp"
             android:text="@string/hotlines_website_silver"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
             app:layout_constraintHorizontal_bias="0.0"
@@ -175,7 +176,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="6385-3714"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home_hotline_website_silver" />
 
@@ -186,7 +187,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_touchline"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView14"
@@ -201,7 +202,7 @@
             android:layout_marginEnd="24dp"
             android:text="1800 377 2252"
             android:autoLink="phone"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home_hotline_website_touchline" />
 
@@ -212,7 +213,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_helpbot"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -226,7 +227,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_msf"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
