@@ -1,11 +1,14 @@
 package app.nush.cura.ui.main
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import app.nush.cura.R
@@ -31,6 +34,10 @@ class HomeHotlinesFragment : Fragment() {
             v.setLinkTextColor(Color.BLUE)
         }
 
+        view.findViewById<ImageView>(R.id.imageView2).setOnClickListener { v ->
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse( "https://www.gov.sg/article/call-these-helplines-if-you-need-emotional-or-psychological-support"))
+            startActivity(intent)
+        }
 
 
         return view

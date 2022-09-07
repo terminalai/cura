@@ -27,7 +27,7 @@ class MainFragment : Fragment() {
             when(it.itemId){
                 R.id.home->setCurrentFragment(homeFragment)
                 R.id.chat->setCurrentFragment(chatFragment)
-                R.id.settings->setCurrentFragment(healthFragment)
+                R.id.health->setCurrentFragment(healthFragment)
 
             }
             true

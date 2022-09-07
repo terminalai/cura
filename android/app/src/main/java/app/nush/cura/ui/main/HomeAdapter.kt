@@ -13,10 +13,12 @@ import app.nush.cura.R
 
 class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
-    private val images = listOf(R.drawable.phone, R.drawable.cbt, R.drawable.img)
+    private val images = listOf(R.drawable.hotlines, R.drawable.cbt, R.drawable.img)
     private val titles = listOf("Hotlines", "Cognitive Behavioural Therapy", "Effective Communication")
-    private val details = arrayOf("If you need help, Click for more helpful hotlines", "CBT has been shown to be extremely beneficial to anyone struggling with stress", "Learn about explaining your needs and getting what you want")
+    private val details = arrayOf("If you need help, click for more helpful hotlines.", "CBT has been shown to be extremely beneficial to anyone struggling with stress. Click to learn more.", "Learn about explaining your needs and getting what you want.")
     private val info = arrayOf(R.string.hotlines, R.string.cbt, R.string.effective_communication)
+
+    private val links = arrayOf("https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral","https://the-collaborative.com/effective-communication-and-how-to-get-what-you-want-from-people/")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -39,8 +41,9 @@ if (position == 0) {
 } else {
     Navigation.findNavController(view).navigate(R.id.homeFragment_to_homeInfoFragment, Bundle().apply { putString("page_title",
         titles[position]
-    ); putString("page_info", view.context.resources.getString(info[position]));
+    ); putString("page_info", view.context.resources.getString(info[position]))
         putInt("page_img", images[position])
+        putString("page_link",links[position-1])
     })
 }
 }

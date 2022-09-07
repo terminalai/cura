@@ -6,9 +6,10 @@
     android:layout_height="wrap_content"
     android:id="@+id/card_view"
     android:layout_margin="10dp"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="25dp"
     app:cardElevation="3dp"
-    app:contentPadding="4dp"
+    app:contentPadding="16dp"
+    app:contentPaddingBottom="24dp"
     android:foreground="?selectableItemBackground"
     android:clickable="true">
 
@@ -27,29 +28,37 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="142dp"
-            android:padding="16dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/item_title"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/item_detail"
-                app:layout_constraintEnd_toEndOf="@+id/item_detail"
-                app:layout_constraintStart_toStartOf="@+id/item_detail"
+                android:layout_width="383dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="30sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@tools:sample/cities" />
 
             <TextView
                 android:id="@+id/item_detail"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:text="city"
+                android:theme="@style/Theme.Cura.GreyText"
                 android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/item_title"
                 app:layout_constraintTop_toBottomOf="@+id/item_title" />
 
 

@@ -83,6 +83,10 @@
         <argument
             android:name="page_info"
             app:argType="string" />
+
+        <argument
+            android:name="page_link"
+            app:argType="string" />
         <argument
             android:name="page_img"
             app:argType="integer" />
