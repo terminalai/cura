@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="app.nush.cura.ui.login.StartPaneFragment"
-        android:label="@string/first_fragment_label"
+        android:label="Cura"
         tools:layout="@layout/fragment_start">
 
         <action
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="app.nush.cura.ui.login.UserSignInFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Login"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/registrationPaneOneFragment"
         android:name="app.nush.cura.ui.login.RegistrationPaneOneFragment"
-        android:label="fragment_registration_pane_one"
+        android:label="Registration"
         tools:layout="@layout/fragment_registration_pane_one" >
         <action
             android:id="@+id/action_registrationPaneOneFragment_to_SecondFragment"
@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/registrationPaneTwoFragment"
         android:name="app.nush.cura.ui.login.RegistrationPaneTwoFragment"
-        android:label="fragment_registration_pane_two"
+        android:label="Registration"
         tools:layout="@layout/fragment_registration_pane_two" >
         <action
             android:id="@+id/action_registrationPaneTwoFragment_to_registrationPaneOneFragment"
@@ -58,7 +58,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="app.nush.cura.ui.main.MainFragment"
-        android:label="fragment_main"
+        android:label="Home"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_chatPageFragment"
@@ -100,11 +100,11 @@
     <fragment
         android:id="@+id/HomeInfoFragment"
         android:name="app.nush.cura.ui.main.HomeInfoFragment"
-        android:label="HomeInfoFragment" />
+        android:label="Information" />
 
     <fragment
         android:id="@+id/HomeHotlinesFragment"
         android:name="app.nush.cura.ui.main.HomeHotlinesFragment"
-        android:label="HomeHotlinesFragment" />
+        android:label="Hotlines" />
 
 </navigation>

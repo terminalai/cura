@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import app.nush.cura.MainActivity
 import app.nush.cura.R
 
 
@@ -23,6 +24,8 @@ class HomeInfoFragment: Fragment()  {
         val title = requireArguments().get("page_title").toString()
         val info = requireArguments().get("page_info").toString()
         val img = requireArguments().get("page_img")
+
+        (requireActivity() as MainActivity).supportActionBar?.title = title
 
         view.findViewById<TextView>(R.id.home_info_title).text = title
         view.findViewById<TextView>(R.id.home_info_info).text = info
