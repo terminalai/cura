@@ -19,6 +19,14 @@ class RegistrationPaneOneFragment : AuthFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.previous.setOnClickListener(NavigateOnClick(R.id.action_registrationPaneOneFragment_to_SecondFragment))
-        binding.next.setOnClickListener(NavigateOnClick(R.id.action_registrationPaneOneFragment_to_registrationPaneTwoFragment))
+        binding.next.setOnClickListener(
+            NavigateOnClick(
+                R.id.action_registrationPaneOneFragment_to_registrationPaneTwoFragment,
+                Bundle().apply {
+                    putString("username", binding.username.text.toString())
+                    putString("password", binding.password.text.toString())
+                }
+            )
+        )
     }
 }

@@ -1,5 +1,6 @@
 package app.nush.cura.ui.auth
 
+import android.os.Bundle
 import android.view.View
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +18,9 @@ open class AuthFragment: Fragment() {
         (activity as AppCompatActivity?)?.supportActionBar?.show()
     }
 
-    inner class NavigateOnClick(@IdRes val resId: Int): View.OnClickListener {
+    inner class NavigateOnClick(@IdRes val resId: Int, val bundle: Bundle = Bundle()): View.OnClickListener {
         override fun onClick(p0: View?) {
-            findNavController().navigate(resId)
+            findNavController().navigate(resId, bundle)
         }
     }
 }

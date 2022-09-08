@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentRegistrationPaneTwoBinding
 import app.nush.cura.model.chat.User
+import app.nush.cura.model.firebase.FirebaseUtil
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
@@ -19,11 +20,18 @@ class RegistrationPaneTwoFragment : AuthFragment() {
     private var interests = arrayListOf<String>()
     private val binding get() = _binding!!
 
+    private var username: String = ""
+    private var password: String = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegistrationPaneTwoBinding.inflate(inflater, container, false)
+
+        username = requireArguments().get("username").toString()
+        password = requireArguments().get("password").toString()
+
         binding.addInterest.setOnClickListener {
             val keyword: String = binding.menu.editText?.text.toString()
             if (keyword in interests) return@setOnClickListener
@@ -53,6 +61,10 @@ class RegistrationPaneTwoFragment : AuthFragment() {
         val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
         binding.list.setAdapter(adapter)
         binding.previous.setOnClickListener(NavigateOnClick(R.id.action_registrationPaneTwoFragment_to_registrationPaneOneFragment))
-        binding.next.setOnClickListener(NavigateOnClick(R.id.action_registrationPaneTwoFragment_to_SecondFragment))
+
+        binding.next.setOnClickListener {
+            FirebaseUtil.register(username, password, interests)
+            findNavController().navigate(R.id.action_registrationPaneTwoFragment_to_SecondFragment)
+        }
     }
 }

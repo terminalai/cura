@@ -10,5 +10,5 @@ class MessageUI(val msg: Message): IMessage {
     override fun getId() = msg.msgId
     override fun getText() = msg.msg
     override fun getUser() = FirebaseUtil.chats[msg.receiverId]!!.second
-    override fun getCreatedAt() = Date(msg.sent.toEpoch())
+    override fun getCreatedAt() = msg.sent
 }

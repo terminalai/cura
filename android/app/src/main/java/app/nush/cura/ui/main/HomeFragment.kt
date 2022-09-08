@@ -10,16 +10,23 @@ import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import app.nush.cura.R
+import app.nush.cura.databinding.FragmentHomeBinding
+import app.nush.cura.model.firebase.FirebaseUtil
 
 class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    val binding: FragmentHomeBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val recycler = view.findViewById<RecyclerView>(R.id.recycler)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.helloMessage.text = "Hello ${FirebaseUtil.user!!.username}"
+
+        val recycler = binding.recycler
 
 
         if (recycler is RecyclerView) {
@@ -28,7 +35,7 @@ class HomeFragment : Fragment() {
                 adapter = HomeAdapter()
             }
         }
-        return view
+        return binding.root
     }
 
 }

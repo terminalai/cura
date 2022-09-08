@@ -1,6 +1,8 @@
 package app.nush.cura.model.firebase
 
 import android.util.Log
+import android.widget.Toast
+import app.nush.cura.model.chat.Message
 import app.nush.cura.model.chat.User
 import app.nush.cura.model.util.AES
 import app.nush.cura.ui.components.UserUI
@@ -8,6 +10,8 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.firestore.ktx.firestore
+import java.util.*
+import kotlin.collections.ArrayList
 
 object FirebaseUtil {
     private var FIRESTORE: FirebaseFirestore? = null
@@ -24,38 +28,74 @@ object FirebaseUtil {
 
     private val aes = AES()
 
-    public val chats: Map<String, Pair<User, UserUI>> = mapOf()
+    public val chatMessages: HashMap<String, List<Message>> = hashMapOf()
+
+    public val chats: HashMap<String, Pair<User, UserUI>> = hashMapOf()
+
+    fun getLastMessage(receiverId: String): Pair<Message?, Int> {
+        val chatId = generateChatId(user!!.userId, receiverId)
+        var message: Message? = null;
+        var unread: Int = 0
+        chatCollection().document(chatId).get().addOnSuccessListener {
+            it?.data?.let { data ->
+                val lastMessage = data["lastMessage"] as String
+                val lastSentEpochs = data["lastSent"] as Long
+                val lastSentBy = data["lastSentBy"] as String
+                unread = (data["msgCount"] as Int) - chatMessages.getOrDefault(receiverId, listOf()).size
+                val lastReceivedBy = if(lastSentBy == receiverId) user!!.userId else receiverId
+
+                val lastSent = Date(lastSentEpochs)
+                val msgId = "${lastSentEpochs/1000}"
+                message = Message(
+                    msgId, lastMessage, lastSent, lastSentBy, lastReceivedBy
+                )
+            }
+        }
+        return message to unread
+    }
+
+    private fun loadMessages(receiverId: String): List<Message> {
+        val chatId = generateChatId(user!!.userId, receiverId)
+        var messages: List<Message> = listOf()
+        chatCollection().document(chatId).collection("messages").get().addOnSuccessListener { result ->
+            messages = result.filterNotNull().sortedBy { it["msgIdx"] as Int }.map {
+                val data = it.data
+                Message(
+                    it["msgId"].toString(), it["msg"].toString(),
+                    Date(it["createdAt"] as Long), it["senderId"].toString(), it["receiverId"].toString()
+                )
+            }
+        }
+        return messages
+    }
+
+    fun loadMessagesIn(receiverId: String) {
+        chatMessages[receiverId] = loadMessages(receiverId)
+    }
     
     fun sendMessage(receiverId: String, msg: String) {
-        user?.let {
-            val msgId = generateMsgId(it, receiverId);
-            val senderData = mapOf(
-                "userId" to it.userId, "username" to it.username,
-                "password" to it.password, "interests" to it.interests,
-                "chats" to it.chats.also { chats ->
-                    chats[receiverId]?.get("messages")?.add(msgId)
-                }
-            )
+        val chatId = generateChatId(user!!.userId, receiverId)
+        val createdAt = System.currentTimeMillis()
+        val msgId = "${createdAt / 1000}"
+        val msgIdx = getLastMessage(receiverId).second + chatMessages.getOrDefault(receiverId, listOf()).size + 1
 
-            userCollection().document(it.userId).set(senderData)
-            userCollection().document(receiverId).get().addOnSuccessListener { resp ->
-                resp?.data?.let { data ->
-                    (data["chats"] as Map<String, Map<String, ArrayList<String>>>)[it.userId]?.get("messages")?.add(msgId)
-                    userCollection().document(receiverId).set(data)
-                }
-            }
+        val data = hashMapOf<String, Any?>(
+            "msg" to msg, "msgId" to msgId, "msgIdx" to msgIdx,
+            "receiverId" to receiverId, "senderId" to user!!.userId,
+            "createdAt" to createdAt
+        )
 
-            val messageData = mapOf(
-                "msgId" to msgId,
-                "msg" to msg,
-                "senderId" to it.userId,
-                "receiverId" to receiverId,
-                "sent" to Timestamp.now()
-            )
+        chatCollection().document(chatId).collection("messages").document(msgId).set(data)
 
-            messageCollection().document(msgId).set(messageData)
-        }
+        val lastMessageData = hashMapOf<String, Any?>(
+            "chatId" to chatId, "lastMessage" to msg,
+            "lastSent" to createdAt, "lastSentBy" to user!!.userId,
+            "msgCount" to msgId+1
+        )
 
+        chatCollection().document(chatId).set(lastMessageData)
+
+        loadMessagesIn(receiverId)
     }
 
     fun userCollection() = firestore.collection("users")
@@ -64,28 +104,33 @@ object FirebaseUtil {
 
     fun newUser(userData: Map<String, Any?>) = User(
         userData["id"] as String, userData["username"] as String, userData["password"] as String,
-        userData["interests"] as List<String>, userData["chats"] as Map<String, Map<String, ArrayList<String>>>
+        userData["interests"] as List<String>, userData["chats"] as List<String>
     )
 
-    fun register(username: String, password: String, interests: List<String>) {
-        val id = encrypt("$username~~!!~~!!~~$password")
+    fun register(username: String, password: String, interests: List<String>): Boolean {
+        val id = generateId(username, password)
 
-        val data = mapOf(
+        val data = mutableMapOf(
             "userId" to id, "username" to username,
             "password" to password, "interests" to interests,
-            "chats" to HashMap<String, HashMap<String, ArrayList<String>>>()
+            "chats" to ArrayList<String>()
         )
 
-        userCollection().document(id).get().addOnSuccessListener {
-            // This means that this guy already has an account
-            Log.d("AUTH", "Logging In Instead.")
+        userCollection().document().get().addOnSuccessListener {
+            // Already have an account!
+            data["chats"] = it.data!!.getOrDefault("chats", listOf<String>()) as List<String>
+        }
+
+        var success = false
+        userCollection().document(id).set(data).addOnSuccessListener {
+            Log.d("AUTH", "Register Successful")
+            success = true
         }.addOnFailureListener {
-            // This means they're actually logging in
-            Log.d("AUTH", "Registering!")
+            Log.d("AUTH", "Register Unsuccessful")
         }
 
         user = newUser(data)
-        userCollection().document(id).set(data)
+        return success
     }
 
     fun login(username: String, password: String): Boolean {
@@ -104,7 +149,9 @@ object FirebaseUtil {
     private fun generateId(username: String, password: String) = "$username$DELIMITER$password"
     // encrypt(     )
 
-    private fun generateMsgId(sender: User, receiverId: String) = "${sender.userId}$DELIMITER${sender.chats.getOrDefault(receiverId, hashMapOf()).getOrDefault("messages", listOf<String>()).size+1}$DELIMITER$receiverId"
+    private fun generateChatId(senderId: String, receiverId: String) =
+        if(senderId < receiverId) "$senderId$DELIMITER$receiverId"
+        else "$receiverId$DELIMITER$senderId"
 
 
     private fun encrypt(string: String): String {

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentLoginBinding
+import app.nush.cura.model.firebase.FirebaseUtil
 
 
 class UserSignInFragment : AuthFragment() {
@@ -22,7 +23,13 @@ class UserSignInFragment : AuthFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.register.setOnClickListener(NavigateOnClick(R.id.action_SecondFragment_to_registrationPaneOneFragment))
-        binding.login.setOnClickListener(NavigateOnClick(R.id.action_SecondFragment_to_mainFragment))
+        binding.login.setOnClickListener {
+            FirebaseUtil.login(
+                binding.username.text.toString(),
+                binding.password.text.toString()
+            )
+            findNavController().navigate(R.id.action_SecondFragment_to_mainFragment)
+        }
     }
 
     override fun onDestroyView() {

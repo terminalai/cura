@@ -5,5 +5,5 @@ data class User(
     val username: String,
     val password: String,
     val interests: List<String>,
-    val chats: Map<String, Map<String, ArrayList<String>>>
+    val chats: List<String>
 )
