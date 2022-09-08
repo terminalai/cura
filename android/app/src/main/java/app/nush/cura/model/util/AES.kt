@@ -7,7 +7,6 @@ import java.util.*
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
-
 class AES {
     private var secretKey: SecretKeySpec? = null
     private lateinit var key: ByteArray

@@ -86,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatPageFragment"
-        android:name="app.nush.cura.ChatPageFragment"
+        android:name="app.nush.cura.ui.main.chat.ChatPageFragment"
         android:label="ChatPageFragment" />
 
     <fragment

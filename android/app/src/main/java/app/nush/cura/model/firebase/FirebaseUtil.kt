@@ -60,6 +60,7 @@ object FirebaseUtil {
 
     fun userCollection() = firestore.collection("users")
     fun messageCollection() = firestore.collection("messages")
+    fun chatCollection() = firestore.collection("chats")
 
     fun newUser(userData: Map<String, Any?>) = User(
         userData["id"] as String, userData["username"] as String, userData["password"] as String,

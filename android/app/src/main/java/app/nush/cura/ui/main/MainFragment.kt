@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import app.nush.cura.R
 import app.nush.cura.databinding.FragmentMainBinding
+import app.nush.cura.ui.main.chat.ChatFragment
 
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
