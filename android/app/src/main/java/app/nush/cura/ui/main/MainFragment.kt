@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
         _binding = FragmentMainBinding.inflate(inflater, container, false);
         val homeFragment = HomeFragment()
         val chatFragment = ChatFragment()
-        val settingsFragment = SettingsFragment()
+        val healthFragment = HealthFragment()
 
         setCurrentFragment(homeFragment)
 
@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
             when(it.itemId){
                 R.id.home->setCurrentFragment(homeFragment)
                 R.id.chat->setCurrentFragment(chatFragment)
-                R.id.settings->setCurrentFragment(settingsFragment)
+                R.id.health->setCurrentFragment(healthFragment)
 
             }
             true

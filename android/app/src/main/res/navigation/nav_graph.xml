@@ -73,11 +73,19 @@
             android:id="@+id/homeFragment_to_homeHotlinesFragment"
             app:destination="@id/HomeHotlinesFragment" />
 
+        <action
+            android:id="@+id/action_mainFragment_to_chatFragment"
+            app:destination="@id/chatPageFragment" />
+
         <argument
             android:name="page_title"
             app:argType="string" />
         <argument
             android:name="page_info"
+            app:argType="string" />
+
+        <argument
+            android:name="page_link"
             app:argType="string" />
         <argument
             android:name="page_img"
@@ -87,7 +95,8 @@
     <fragment
         android:id="@+id/chatPageFragment"
         android:name="app.nush.cura.ui.main.chat.ChatPageFragment"
-        android:label="ChatPageFragment" />
+        android:label="Chat" />
+
 
     <fragment
         android:id="@+id/HomeFragment"
@@ -107,4 +116,17 @@
         android:name="app.nush.cura.ui.main.HomeHotlinesFragment"
         android:label="Hotlines" />
 
-</navigation>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="app.nush.cura.ui.main.ChatFragment"
+        android:label="Chats">
+
+        <action
+            android:id="@+id/action_chatFragment_to_chatPageFragment"
+            app:destination="@id/chatPageFragment" />
+
+    </fragment>
+
+
+
+    </navigation>

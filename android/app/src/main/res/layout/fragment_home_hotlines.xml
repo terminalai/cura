@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.HomeHotlinesFragment">
+    tools:context=".ui.main.HomeHotlinesFragment"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/constraint1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="80dp"
 
         >
 
@@ -20,7 +30,7 @@
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/phone" />
+            app:srcCompat="@drawable/call" />
 
         <TextView
             android:id="@+id/home_info_title"
@@ -41,13 +51,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
             android:text="- National Care Hotline: (8am-12am daily)"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView4"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/home_info_image"
-            app:layout_constraintTop_toBottomOf="@+id/home_info_title" />
+            app:layout_constraintTop_toBottomOf="@+id/home_info_image" />
 
         <TextView
             android:id="@+id/textView3"
@@ -76,7 +86,7 @@
             android:layout_marginEnd="20dp"
             android:autoLink="phone"
             android:text="1800-202-6868"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView2" />
 
@@ -84,10 +94,10 @@
             android:id="@+id/home_hotline_website_feiyue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_feiyue"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -101,7 +111,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
             android:text="- Institute of Mental Health’s Mental Health Helpline"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
@@ -116,7 +126,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="6389-2222"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView6" />
 
@@ -127,7 +137,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="7dp"
             android:text="- Samaritans of Singapore"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@+id/textView9"
             app:layout_constraintHorizontal_bias="0.0"
@@ -141,7 +151,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="1800-221-4444"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
@@ -152,7 +162,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="28dp"
             android:text="@string/hotlines_website_silver"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
             app:layout_constraintHorizontal_bias="0.0"
@@ -166,7 +176,7 @@
             android:layout_marginEnd="24dp"
             android:autoLink="phone"
             android:text="6385-3714"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home_hotline_website_silver" />
 
@@ -177,7 +187,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_touchline"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView14"
@@ -192,7 +202,7 @@
             android:layout_marginEnd="24dp"
             android:text="1800 377 2252"
             android:autoLink="phone"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home_hotline_website_touchline" />
 
@@ -203,7 +213,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_helpbot"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -218,7 +228,7 @@
             android:layout_marginBottom="100dp"
             android:layout_marginEnd="10dp"
             android:text="@string/hotlines_website_msf"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -226,3 +236,65 @@
             app:layout_constraintTop_toBottomOf="@+id/home_hotline_website_helpbot" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/drawable_white_rectangle" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/drawable_rounded_rectangle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/external_link" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to link"
+                android:layout_weight="0.5"
+                android:textSize="18sp"
+                android:theme="@style/Theme.Cura.WhiteText"
+                />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
